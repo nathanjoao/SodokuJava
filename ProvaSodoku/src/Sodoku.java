@@ -6,16 +6,17 @@ public class Sodoku {
 		
 		 Scanner sc = new Scanner (System.in); 
 		 
-		 int N = 0, n[][] = new int[9][9];        
-		 int nao = 0;
-		 int sim = 0;
-		 int n2 = 0;
-		 int s2 = 0;         
-		 
+		 int N = 0;
+		         
 		 System.out.println(" Digite a quantidade de jogadores: ");         
 		 N = sc.nextInt();        
 		 
 		 String[] M = new String[N];         
+		 int n[][] = new int[9][9];        
+		 int nao = 0;
+		 int sim = 0;
+		 int n2 = 0;
+		 int s2 = 0;   
 		 
 		 for (int cont = 0; cont < N; cont++) {            
 			 System.out.printf(" Digite o nome do jogador ", (cont + 1) + " :");             
@@ -23,23 +24,23 @@ public class Sodoku {
 
 		 }         
 		
-		 for (int jogadores = 0; jogadores < N; jogadores++) {            
+		 for (int nj = 0; nj < N; nj++) {            
 			 
 			 for (int l = 0; l < 9; l++) {                
 				 for (int c = 0; c < 9; c++) {                    
-					 System.out.printf("Digite o valor: ");                     
+					 System.out.printf(" Digite o valor: ");                     
 					 n[l][c] = sc.nextInt();                    
 					 
 					 if (n[l][c] < 1 || n[l][c] > 9) {                         
-						 System.out.println(" insira um valor acima de 0 e menor que 9");                        
+						 System.out.println(" Este valor não cabe na matriz, insira um valor acima de 0 até o 9 ");                        
 						 c--;                    
 						 
 					 	}                
 					 }             
 				 }             
 			
-			 for (int l = 0; l < 9; l++) {                
-				 for (int c = 0; c < 9; c++) {                    
+		for (int l = 0; l < 9; l++) {                
+			for (int c = 0; c < 9; c++) {                    
 					 
 		int valorN = n[l][c];                     
 		
@@ -59,8 +60,8 @@ public class Sodoku {
 				 }             
 			 }            
 			 
-			 for (int l = 0; l < 9; l++) {                
-				 for (int c = 0; c < 9; c++) {                     
+		for (int l = 0; l < 9; l++) {                
+			for (int c = 0; c < 9; c++) {                     
 					 
 		int valorN = n[l][c];                     
 		
@@ -106,7 +107,7 @@ public class Sodoku {
 			}            
 		}            
 		
-		System.out.println("\nSodoku do: " + M[jogadores] + "\n");            
+		System.out.println("\n Sodoku do(a): " + M[nj] + "\n");            
 		
 		for (int l = 0; l < 9; l++) {                
 			for (int c = 0; c < 9; c++) {                    
@@ -140,7 +141,8 @@ public class Sodoku {
 				
 				System.err.println("\nNÃO!");             
 				
-					}         
+			}         
+		 	
 		 		}    
 			}
 		}
